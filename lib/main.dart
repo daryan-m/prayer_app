@@ -401,10 +401,8 @@ class _PrayerHomePageState extends State<PrayerHomePage> {
               end: Alignment.bottomRight)),
       child: Container(
           decoration: BoxDecoration(
-              color: context
-                  .watch<AppProvider>()
-                  .neumorphicColor
-                  .withValues(alpha: 0.8),
+              color:
+                  context.watch<AppProvider>().neumorphicColor.withOpacity(0.5),
               borderRadius: BorderRadius.circular(10)),
           child: ListTile(
               visualDensity: VisualDensity.compact,
@@ -540,7 +538,7 @@ class NeumorphicPrayerCard extends StatelessWidget {
                         Theme.of(context)
                             .colorScheme
                             .secondary
-                            .withValues(alpha: 0.5),
+                            .withOpacity(0.5),
                         value)!
                   ]),
               boxShadow: isSelected
@@ -548,13 +546,13 @@ class NeumorphicPrayerCard extends StatelessWidget {
                   : [
                       BoxShadow(
                           color: isDark
-                              ? Colors.black.withValues(alpha: 0.5)
-                              : Colors.white.withValues(alpha: 0.7),
+                              ? Colors.black.withOpacity(0.5)
+                              : Colors.white.withOpacity(0.5),
                           offset: const Offset(-4, -4),
                           blurRadius: 4),
                       BoxShadow(
                           color: isDark
-                              ? Colors.black.withValues(alpha: 0.3)
+                              ? Colors.black.withOpacity(0.5)
                               : Colors.grey.shade400,
                           offset: const Offset(4, 4),
                           blurRadius: 4),
@@ -615,14 +613,14 @@ class NeumorphicIconButton extends StatelessWidget {
                 ? [
                     BoxShadow(
                         color: isDark
-                            ? Colors.black.withValues(alpha: 0.3)
+                            ? Colors.black.withOpacity(0.5)
                             : Colors.grey.shade400,
                         offset: const Offset(2, 2),
                         blurRadius: 2,
                         spreadRadius: 1),
                     BoxShadow(
                         color: isDark
-                            ? Colors.black.withValues(alpha: 0.5)
+                            ? Colors.black.withOpacity(0.5)
                             : Colors.white,
                         offset: const Offset(-2, -2),
                         blurRadius: 2,
@@ -631,13 +629,13 @@ class NeumorphicIconButton extends StatelessWidget {
                 : [
                     BoxShadow(
                         color: isDark
-                            ? Colors.black.withValues(alpha: 0.5)
+                            ? Colors.black.withOpacity(0.5)
                             : Colors.white,
                         offset: const Offset(-3, -3),
                         blurRadius: 3),
                     BoxShadow(
                         color: isDark
-                            ? Colors.black.withValues(alpha: 0.3)
+                            ? Colors.black.withOpacity(0.5)
                             : Colors.grey.shade400,
                         offset: const Offset(3, 3),
                         blurRadius: 3),
@@ -720,7 +718,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                          color: Colors.grey.withValues(alpha: 0.5),
+                          color: Colors.grey.withOpacity(0.5),
                           blurRadius: 5,
                           offset: const Offset(2, 2)),
                     ]),
