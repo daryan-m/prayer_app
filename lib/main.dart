@@ -319,7 +319,7 @@ class _PrayerHomePageState extends State<PrayerHomePage> {
                 fontSize: 38,
                 fontWeight: FontWeight.w900,
                 color: Color(0xFFB8860B),
-                fontFeatures: const [FontFeature.('tnum')])),
+                fontFeatures: const [FontFeature('tnum')])),
         const SizedBox(height: 5),
         Text(getHijriDate(),
             style: const TextStyle(
