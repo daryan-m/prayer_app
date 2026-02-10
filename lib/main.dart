@@ -8,6 +8,7 @@ import 'dart:developer' as developer;
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'notification_service.dart';
+import 'dart:ui';
 
 // --- App State Management ---
 class AppProvider with ChangeNotifier {
@@ -318,7 +319,7 @@ class _PrayerHomePageState extends State<PrayerHomePage> {
                 fontSize: 38,
                 fontWeight: FontWeight.w900,
                 color: Color(0xFFB8860B),
-                fontFeatures: [FontFeature.tabularFigures()])),
+                fontFeatures: const [FontFeature.('tnum')])),
         const SizedBox(height: 5),
         Text(getHijriDate(),
             style: const TextStyle(
