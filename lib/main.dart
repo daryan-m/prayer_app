@@ -111,13 +111,13 @@ class PrayerTimesApp extends StatelessWidget {
       builder: (context, appProvider, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          locale: const Locale('ku', 'IQ'),
+          //locale: const Locale('ku', 'IQ'),
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          supportedLocales: const [Locale('ar', 'IQ'), Locale('ku', 'IQ')],
+          //supportedLocales: const [Locale('ar', 'IQ'), Locale('ku', 'IQ')],
           theme: appProvider.currentTheme,
           home: const PrayerHomePage(),
         );
